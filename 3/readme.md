@@ -16,7 +16,9 @@ kotlinc day03.kt && cat input3.txt | Kotlin Day03Kt
 EDIT:
 
 Okay, so I had to make the terrible Java version. It works. It is quite terrible(but less terrible
-than expected). I like it quite a lot.
+than expected).
+
+I like it quite a lot.
 
 ### 3-2
 
