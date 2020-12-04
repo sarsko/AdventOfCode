@@ -1,5 +1,5 @@
 .DS_Store
-/META-INF
+*/META-INF/*
 Kotlin
 .idea/shelf
 /confluence/target
