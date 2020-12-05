@@ -5,7 +5,8 @@ When I saw the task, I immediately thought:
 "This is a task for APL!"
 
 Now, the problem is, I don't know APL, so I have spent far more time than I would like to admit
-on solving todays task, but I must say: it was a lot of fun:)
+on solving todays task, but I must say:\
+it was a lot of fun:)
 
 I have no idea if my solution is even vaguely idiomatic, but it solves the problem,
 and is quite succinct, so I am happy.
