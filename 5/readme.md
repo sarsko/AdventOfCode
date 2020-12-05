@@ -95,7 +95,9 @@ We specify that this is a function abstraction with `{}` and bind it to task1.
 ```
 We concatenate 0 (comma is concatenate) with 11 * (the range 1..844) (iota is the index generator)
 
-Note that we in this line bort assign to value and print out the ceiling.
+Note that we in this line both assign to value and print out the ceiling.
+
+Oh, and `/` is reduce.
 
 ```
 values(∪~∩)(⌊/values-1)↓⍳(⌈/values) ⍝ "find uniques of values and floor values..ceil values"
