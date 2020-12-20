@@ -22,7 +22,7 @@ I used the [AoC template](https://github.com/gobanos/aoc-runner) by Gobanos. I'm
 Probably correct in the long run, but there are aspects with files(among other things) I will have to learn later.
 
 The template follow a different ordering scheme than I have followed this far - all my Rust code resides in the `src` folder, and each day
-is symlinked into its respective folder(folder `11` for today), where the `readme.md` also resides. Hopefully it works OK.
+is hardlinked into its respective folder(folder `11` for today), where the `readme.md` also resides. Hopefully it works OK.
 
 ### Actually the solution
 
