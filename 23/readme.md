@@ -21,8 +21,13 @@ with a thoroughly optimizing compiler, yes). It ended up running in 4.9s with ha
 and 6.4s with std, which is not *terrible* but still not great. It works for any
 hashable value, so it will be fine for most uses.
 
-With how easy implementing linkedlists is in C, I feel that either I must be missing
-something, or Rust is seriously lacking a proper linkedlist implementaion.
+I thought hashbrown and std should be same, so I dunno why there is a difference. Also,
+after reading some more, I have realized that my perception of linkedlists is somewhat
+skewed, they are really not that great, as one can usually exchange them for a faster
+collection. Plus the space isn't great either, as every node(value) has to know the
+memory address of the next(or next and previous) which is 32/64(* 2) bits more than
+you need(a doubly linked list of u32s is at least 5 times as resource heavy as a u32
+vector and provides the same utility most of the time)
 
 To run:
 ```
