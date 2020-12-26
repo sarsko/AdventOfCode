@@ -53,8 +53,8 @@ pub fn solve_part2(input: &HashMap<(i32, i32), i32>) -> i32{
     for i in 0..100{
         let mut nextmap: HashMap<(i32, i32), i32> = HashMap::new();
         let mut tmpmap: HashMap<(i32, i32), i32> = HashMap::new();
-        for (east, north) in oldmap.keys(){
-            if oldmap.get(&(*east, *north)).unwrap() == &1{
+        for ((east, north), val) in &oldmap{
+            if val == &1{
                 if oldmap.get(&(east-1, north-1)).is_none(){
                     tmpmap.insert((east-1, north-1), 0);
                 }
@@ -78,19 +78,17 @@ pub fn solve_part2(input: &HashMap<(i32, i32), i32>) -> i32{
         for (key, val) in tmpmap{
             oldmap.insert(key, val);
         }
-        for (&key, &val) in &oldmap{
+        for (&(east,north), &val) in &oldmap{
             if val == 1 {
-                let (east, north) = key;
                 let cnt = count(&oldmap, east, north);
-                if cnt == 0 || cnt > 2{
+                if cnt > 2 || cnt == 0{
                     nextmap.insert((east,north), 0);
                 }
                 else{
                     nextmap.insert((east,north), 1);
                 }
             }
-            if val == 0 {
-                let (east, north) = key;
+            else {
                 let cnt = count(&oldmap, east, north);
                 if cnt == 2{
                     nextmap.insert((east,north), 1);
