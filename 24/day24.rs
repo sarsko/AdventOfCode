@@ -50,27 +50,29 @@ pub fn solve_part1(input: &HashMap<(i32, i32), i32>) -> i32{
 #[aoc(day24, part2)]
 pub fn solve_part2(input: &HashMap<(i32, i32), i32>) -> i32{
     let mut oldmap = input.clone();
-    for _ in 0..100{
+    for i in 0..100{
         let mut nextmap: HashMap<(i32, i32), i32> = HashMap::new();
         let mut tmpmap: HashMap<(i32, i32), i32> = HashMap::new();
         for (east, north) in oldmap.keys(){
-            if oldmap.get(&(east-1, north-1)).is_none(){
-                tmpmap.insert((east-1, north-1), 0);
-            }
-            if oldmap.get(&(east+1, north+1)).is_none(){
-                tmpmap.insert((east+1, north+1), 0);
-            }
-            if oldmap.get(&(east-2, *north)).is_none(){
-                tmpmap.insert((east-2, *north), 0);
-            }
-            if oldmap.get(&(east+2, *north)).is_none(){
-                tmpmap.insert((east+2, *north), 0);
-            }
-            if oldmap.get(&(east-1, north+1)).is_none(){
-                tmpmap.insert((east-1, north+1), 0);
-            }
-            if oldmap.get(&(east+1, north-1)).is_none(){
-                tmpmap.insert((east+1, north-1), 0);
+            if oldmap.get(&(*east, *north)).unwrap() == &1{
+                if oldmap.get(&(east-1, north-1)).is_none(){
+                    tmpmap.insert((east-1, north-1), 0);
+                }
+                if oldmap.get(&(east+1, north+1)).is_none(){
+                    tmpmap.insert((east+1, north+1), 0);
+                }
+                if oldmap.get(&(east-2, *north)).is_none(){
+                    tmpmap.insert((east-2, *north), 0);
+                }
+                if oldmap.get(&(east+2, *north)).is_none(){
+                    tmpmap.insert((east+2, *north), 0);
+                }
+                if oldmap.get(&(east-1, north+1)).is_none(){
+                    tmpmap.insert((east-1, north+1), 0);
+                }
+                if oldmap.get(&(east+1, north-1)).is_none(){
+                    tmpmap.insert((east+1, north-1), 0);
+                }
             }
         }
         for (key, val) in tmpmap{
