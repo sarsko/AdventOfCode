@@ -1,0 +1,5 @@
+grep -o \) input1.txt | wc -l
+
+-
+
+grep -o \( input1.txt | wc -l
