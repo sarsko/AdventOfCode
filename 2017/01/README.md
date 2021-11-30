@@ -16,7 +16,7 @@ used beefy dollar(`<$>`).
 To run:
 
 ```
-ghc 01.hs && ./01
+runhaskell 01.hs
 ```
 
 First is part 1, second is part 2
