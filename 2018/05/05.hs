@@ -20,5 +20,5 @@ main = do
     input <- readFile "input.txt"
     let l = init input
     print $ full l
-    let alph = "abcdefghijklmnopqrstuvwxyz"
+    let alph = ['a' .. 'z']
     print $ map full (map (pre l) alph)
