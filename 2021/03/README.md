@@ -1,5 +1,7 @@
 ## Day 3
 
+Excel solution to part 1 here: https://docs.google.com/spreadsheets/d/1nDh2FhM0vOlEV3WBhL4p1YIXRQ1MHlGRr-qzuUTtbqk/edit?usp=sharing
+
 Did part 1 initially in Excel. Pretty straight forward, turns out Excel isn't
 too bad at splitting up into columns, adding those, and figuring if the values
 are greater than/less than some value. Probably possible to do part 2 in Excel
