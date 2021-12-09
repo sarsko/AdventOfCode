@@ -20,3 +20,12 @@ Also, programming in Smalltalk has been thoroughly unenjoyable. Like yeah, I get
 there is, but the error messages are completely useless, the vocabulary is occult and finding an answer to your question is damn near impossible.
 
 0/10 would not reccommend.
+
+### Part 2 second time
+
+I am really happy with this solution. It is short, easy to understand, and easy
+to implement. No need to do a bunch of parsing or adding parantheses. I first
+swap `+` with `*` and vice versa, then wrap all the numbers in a `Num` class,
+before using `eval` to do all the lifting for me. Did `:%s/(/( /g` and `:%s/)/) /g` in
+in Vim on the input file beforehand, but this could have been done in Python as
+well.
