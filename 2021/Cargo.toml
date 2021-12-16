@@ -1,0 +1,14 @@
+[package]
+name = "advent_of_code_2021"
+version = "0.1.0"
+authors = ["Sarek"]
+edition = "2018"
+rust-version = "1.56"
+
+[lib]
+bench = false
+
+[dependencies]
+rust-crypto = "0.2.36"
+aoc-runner = "0.3.0"
+aoc-runner-derive = "0.3.0"
