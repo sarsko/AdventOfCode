@@ -1,0 +1,2 @@
+Solved by hand (realizing that the first three remain the same, and that the next
+thus becomes vzbxxyzz). For the next after that, we increment b, and get vzcaabcc.
