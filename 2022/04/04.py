@@ -1,6 +1,6 @@
 part1 = 0
 part2 = 0
-for line in open("input.txt").readlines():
+for line in open("input.txt"):
     l, r = line.strip().split(",")
     ll, lr = map(int, l.split("-"))
     rl, rr = map(int, r.split("-"))
