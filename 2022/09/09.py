@@ -9,14 +9,15 @@ part1 = set()
 
 for line in open("input.txt").read().strip().split("\n"):
     l, r = line.split()
-    inc = [1,-1][l == "L" or l == "D"]
-    i = l == "R" or l == "L"
+    inc = [1,-1][l in {"L", "D"}]
+    i = l in {"R", "L"}
     for _ in range(int(r)):
         rope[0][i] += inc
         for j in range(1, 10):
             dist = abs(rope[j-1][0] - rope[j][0]) + abs(rope[j-1][1] - rope[j][1])
 
-            if (rope[j-1][0] == rope[j][0] or rope[j-1][1] == rope[j][1]) and dist > 1 or dist > 2:
+            if dist > 2 or 1 in map(int.__eq__, rope[j], rope[j-1]) and dist > 1:
+
                 rope[j][1] += sign(rope[j-1][1] - rope[j][1])
                 rope[j][0] += sign(rope[j-1][0] - rope[j][0])
 
