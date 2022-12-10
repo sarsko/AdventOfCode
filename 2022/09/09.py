@@ -1,7 +1,7 @@
 def sign(x):
-    if x == 0:
-        return 0
-    return [-1, 1][x > 0]
+    if x < 0:
+        return -1
+    return x > 0
 
 rope = [[0,0] for _ in range(10)]
 part2 = set()
@@ -10,7 +10,7 @@ part1 = set()
 for line in open("input.txt").read().strip().split("\n"):
     l, r = line.split()
     inc = [1,-1][l == "L" or l == "D"]
-    i = [0,1][l == "R" or l == "L"]
+    i = l == "R" or l == "L"
     for _ in range(int(r)):
         rope[0][i] += inc
         for j in range(1, 10):
